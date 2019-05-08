@@ -2,13 +2,12 @@ import java.util.Random;
 
 public class Main {
 
-    public static int numGen(int num) {
+    private static int numGen(int num) {
         Random random = new Random();
-        int ranGen = 1 + random.nextInt(num);
-        return ranGen;
+        return 1 + random.nextInt(num);
     }
 
-    public static void matrixGen(int[][] matrix) {
+    private static void matrixGen(int[][] matrix) {
         Random rand = new Random();
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -17,12 +16,12 @@ public class Main {
         }
     }
 
-    public static void matrixPrint(int[][] matrix, String str) {
+    private static void matrixPrint(int[][] matrix, String str) {
         System.out.println(str);
         matrixPrint(matrix);
     }
 
-    public static void matrixPrint(int[][] matrix) {
+    private static void matrixPrint(int[][] matrix) {
         for (int i = 0; i < matrix.length; ++i) {
             for (int j = 0; j < matrix[i].length; ++j) {
                 System.out.print(matrix[i][j] + " ");
@@ -31,7 +30,7 @@ public class Main {
         }
     }
 
-    public static int[][] multiply(int[][] mtrxFirst, int[][] mtrxSecond) {
+    private static int[][] multiply(int[][] mtrxFirst, int[][] mtrxSecond) {
 
         int rowOne = mtrxFirst.length;
         int colOne = mtrxFirst[0].length;
@@ -63,12 +62,4 @@ public class Main {
         matrixPrint(second, "SECOND MATRIX");
         matrixPrint(multiply(first, second), "PRETTY WONDERFUL HANDSOME RESULT");
     }
-
-
 }
-
-
-
-
-
-
